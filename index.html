@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/icons-font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Проект 10</title>
+    <script src="src/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header
+        class="header"
+        id="menu"
+        style="background-image: url(/img/top-bg.jpg)"
+      >
+        <div class="container">
+          <div class="header__inner">
+            <div class="header-top">
+              <a class="header-top__logo logo" href="#"
+                ><img class="logo__img" src="img/logo.svg" alt="Логотип"
+              /></a>
+              <nav class="header-top__menu menu" id="menuBurger">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#"
+                      >Главная</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#"
+                      >Про гида</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#"
+                      >Программа тура</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#"
+                      >Стоимость</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#">Блог</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link _icon-burger-arrow" href="#"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <button class="header-top__btn btn">Консультация</button>
+              <button href="#menu" class="menu-burger" id="menu-burger-1">
+                <span class="menu-burger__line"></span>
+              </button>
+            </div>
+            <div class="header-content">
+              <div class="header-content__inner">
+                <h1 class="header-content__title">
+                  Насладись прогулкой в горах с командой единомышленников
+                </h1>
+                <form class="header-content__form" action="get">
+                  <div class="header-content__select-item">
+                    <select class="header-content__select place" id="location">
+                      <option class="header-content__option" value="-">
+                        Локация для тура
+                      </option>
+                      <option class="header-content__option" value="Тибет">
+                        Тибет
+                      </option>
+                      <option class="header-content__option" value="Франция">
+                        Франция
+                      </option>
+                      <option
+                        class="header-content__item"
+                        value="Великобритания"
+                      >
+                        Великобритания
+                      </option>
+                    </select>
+                    <label for="location" class="header-content__text"
+                      >выберите из списка</label
+                    >
+                  </div>
+                  <div class="header-content__select-item">
+                    <input
+                      class="header-content__select date"
+                      type="date"
+                      name="Date"
+                      id="date"
+                    />
+                    <label for="date" class="header-content__text"
+                      >укажите дату</label
+                    >
+                  </div>
+
+                  <div class="header-content__select-item">
+                    <select class="header-content__select persons" id="people">
+                      <option class="header-content__item" value="-">
+                        Участники
+                      </option>
+                      <option class="header-content__option" value="4-7">
+                        4-7
+                      </option>
+                      <option class="header-content__option" value="8-10">
+                        8-10
+                      </option>
+                      <option class="header-content__option" value="11-15">
+                        11-15
+                      </option>
+                      <option class="header-content__option" value="16-20">
+                        16-20
+                      </option>
+                    </select>
+                    <label for="people" class="header-content__text"
+                      >минимум 4 человека</label
+                    >
+                  </div>
+                  <button
+                    class="header-content__btn btn"
+                    type="button"
+                    id="locations-btn"
+                  >
+                    Найти программу
+                  </button>
+                </form>
+                <ul class="places" id="places-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="search">
+          <div class="container">
+            <div class="search__inner">
+              <div class="search__images">
+                <img
+                  class="search__img search__img1"
+                  src="img/search-img-1.jpg"
+                  alt=""
+                />
+                <img
+                  class="search__img search__img2"
+                  src="img/search-img-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="search__content content">
+                <p class="content__about about">о нашем походе</p>
+                <h2 class="content__title title">
+                  Исследуйте все горные массивы мира вместе с нами
+                </h2>
+                <p class="content__text text">
+                  Его корни уходят в один фрагмент классической латыни 45 года
+                  н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+                  профессор латыни из колледжа Hampden-Sydney, штат Вирджиния,
+                  взял одно из самых странных слов в Lorem Ipsum, "consectetur"и
+                  занялся его поисками в классической латинской литературе.
+                </p>
+                <button href="" class="content__btn btn">Программа тура</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="programs">
+          <div class="container">
+            <div class="programs__inner">
+              <div class="programs__content">
+                <p class="programs__about about">наше предложение</p>
+                <h2 class="programs__title title">Лучшие программы для тебя</h2>
+                <p class="programs__text text">
+                  Его корни уходят в один фрагмент классической латыни 45 года
+                  н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+                  профессор латыни из колледжа.
+                </p>
+                <ul class="programs__list">
+                  <li class="programs__list-item">
+                    <img
+                      src="/img/list-img-1.png"
+                      alt=""
+                      class="programs__img"
+                    />
+                    <h4 class="programs__list-title">Опытный гид</h4>
+                    <p class="programs__list-text">
+                      Для современного мира базовый вектор развития предполагает
+                      независимые способы реализации соответствующих условий
+                      активизации.
+                    </p>
+                  </li>
+                  <li class="programs__list-item">
+                    <img
+                      src="/img/list-img-2.png"
+                      alt=""
+                      class="programs__img"
+                    />
+                    <h4 class="programs__list-title">Безопасный поход</h4>
+                    <p class="programs__list-text">
+                      Для современного мира базовый вектор развития предполагает
+                      независимые способы реализации соответствующих условий
+                      активизации.
+                    </p>
+                  </li>
+                  <li class="programs__list-item">
+                    <img
+                      src="/img/list-img-3.png"
+                      alt=""
+                      class="programs__img"
+                    />
+                    <h4 class="programs__list-title">Лояльные цены</h4>
+                    <p class="programs__list-text">
+                      Для современного мира базовый вектор развития предполагает
+                      независимые способы реализации соответствующих условий
+                      активизации.
+                    </p>
+                  </li>
+                </ul>
+                <button href="" class="programs__btn btn">
+                  Стоимость программ
+                </button>
+              </div>
+              <div class="programs__images">
+                <img
+                  src="img/programs-img-1.png"
+                  alt=""
+                  class="programs__images-img"
+                />
+                <img
+                  src="img/programs-img-2.png"
+                  alt=""
+                  class="programs__images-img"
+                />
+                <img
+                  src="img/programs-img-3.png"
+                  alt=""
+                  class="programs__images-img"
+                />
+                <img
+                  src="img/programs-img-4.png"
+                  alt=""
+                  class="programs__images-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__information information">
+              <h5 class="information__title">Компания «РумТибет»</h5>
+              <p class="information__text">
+                Его корни уходят в один фрагмент классической латыни 45 года
+                н.э., то есть более двух тысячелетий назад. Ричард МакКлинток,
+                профессор латыни из колледжа Hampden-Sydney.
+              </p>
+              <div class="information__links">
+                <a href="mailto:info@domain.com" class="information__link-mail"
+                  >info@domain.com</a
+                >
+                <a href="tel:81234567890" class="information__link-number"
+                  >+7 (123) 456-78-90</a
+                >
+              </div>
+              <div class="information__logos">
+                <a href="#" class="information__logo">
+                  <img
+                    src="img/footer-telegram.svg"
+                    alt=""
+                    class="information__img"
+                  />
+                </a>
+                <a href="#" class="information__logo">
+                  <img
+                    src="img/footer-vk.svg.svg"
+                    alt=""
+                    class="information__img"
+                  />
+                </a>
+                <a href="#" class="information__logo">
+                  <img
+                    src="img/footer-pinterest.svg.svg"
+                    alt=""
+                    class="information__img"
+                  />
+                </a>
+                <a href="#" class="information__logo">
+                  <img
+                    src="img/footer-skype.svg.svg"
+                    alt=""
+                    class="information__img"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="footer__services services">
+              <h5 class="services__title">Наши услуги</h5>
+              <ul class="services __list">
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Прогулки в горы летом</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Зимние походы в горы</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Посещение храмов в горах</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Экстремальные виды туризма</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Походы в джунглях Амазонии</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Поездка в Африку</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer__services services">
+              <h5 class="services__title">Важно для путешествий</h5>
+              <ul class="services __list">
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Как собраться в долгий поход?</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Жизненно важные предметы для похода</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Медицинская страховка, гарантии безопасности</a
+                  >
+                </li>
+                <li class="services __item">
+                  <a href="#" class="services__link _icon-burger-arrow"
+                    >Если вы врач - загляните сюда</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__bottom-inner">
+              <p class="footer__bottom-ip">ИП К.К.К., 2023</p>
+              <a href="#" class="footer__bottom-link"
+                >Политика обработки персональных данных</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
