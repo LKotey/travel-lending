@@ -1,27 +1,51 @@
+// Burger menu
 const burger = document.querySelector(".menu-burger");
 const lines = document.querySelector(".menu-burger__line");
 const menu = document.querySelector(".header-top__menu");
 
-function toggleBurger() {
+burger.addEventListener("click", () => {
   lines.classList.toggle("menu-burger__line_active");
-  menu.classList.toggle("header-top__menu_active");
+  menu.classList.toggle("menu_active");
+});
+
+// Scroll btn
+
+const scrollBtn = document.querySelector(".scroll-btn");
+const viewPort = window.innerHeight;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > viewPort / 2) {
+    scrollBtn.classList.add("scroll-btn_visible");
+  } else scrollBtn.classList.remove("scroll-btn_visible");
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Filtering of travel program search queries
+
+class PlaceVariant {
+  constructor(name, people, img) {
+    this.name = name;
+    this.people = people;
+    this.img = img;
+  }
 }
 
-burger.addEventListener("click", toggleBurger);
-
 const placesArray = [
-  { name: "Тибет", people: "4-7", img: "img/tibet.jpeg" },
-  { name: "Франция", people: "4-7", img: "img/france.jpeg" },
-  { name: "Великобритания", people: "4-7", img: "img/england.jpeg" },
-  { name: "Тибет", people: "8-10", img: "img/tibet.jpeg" },
-  { name: "Франция", people: "8-10", img: "img/france.jpeg" },
-  { name: "Великобритания", people: "8-10", img: "img/england.jpeg" },
-  { name: "Тибет", people: "11-15", img: "img/tibet.jpeg" },
-  { name: "Франция", people: "11-15", img: "img/france.jpeg" },
-  { name: "Великобритания", people: "11-15", img: "img/england.jpeg" },
-  { name: "Тибет", people: "16-20", img: "img/tibet.jpeg" },
-  { name: "Франция", people: "16-20", img: "img/france.jpeg" },
-  { name: "Великобритания", people: "16-20", img: "img/england.jpeg" },
+  new PlaceVariant("Тибет", "4-7", "img/tibet.jpeg"),
+  new PlaceVariant("Франция", "4-7", "img/france.jpeg"),
+  new PlaceVariant("Великобритания", "4-7", "img/england.jpeg"),
+  new PlaceVariant("Тибет", "8-10", "img/tibet.jpeg"),
+  new PlaceVariant("Франция", "8-10", "img/france.jpeg"),
+  new PlaceVariant("Великобритания", "8-10", "img/england.jpeg"),
+  new PlaceVariant("Тибет", "11-15", "img/tibet.jpeg"),
+  new PlaceVariant("Франция", "11-15", "img/france.jpeg"),
+  new PlaceVariant("Великобритания", "11-15", "img/england.jpeg"),
+  new PlaceVariant("Тибет", "16-20", "img/tibet.jpeg"),
+  new PlaceVariant("Франция", "16-20", "img/france.jpeg"),
+  new PlaceVariant("Великобритания", "16-20", "img/england.jpeg"),
 ];
 
 document.getElementById("date").valueAsDate = new Date();
