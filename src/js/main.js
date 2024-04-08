@@ -51,7 +51,7 @@ const placesArray = [
 document.getElementById("date").valueAsDate = new Date();
 const place = document.getElementById("location");
 const people = document.getElementById("people");
-const btn = document.getElementById("locations-btn");
+const form = document.getElementById("travel-form");
 const list = document.getElementById("places-list");
 
 function render(places) {
@@ -77,7 +77,9 @@ function render(places) {
   );
 }
 
-btn.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   list.innerHTML = "";
 
   const searchItem = { name: place.value, people: people.value };
